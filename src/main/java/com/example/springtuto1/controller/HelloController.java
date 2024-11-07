@@ -21,13 +21,6 @@ public class HelloController {
         return "hello" + name;
     }
 
-    @GetMapping("hello-api")
-    @ResponseBody // 응답바디에 return값을 넣어주겠다 라는뜻
-    public Hello helloApi(@RequestParam("name") String name) {
-        Hello hello = new Hello();
-        hello.setName(name);
-        return  hello;
-    }
     static class Hello {
         private String name;
 
@@ -39,5 +32,14 @@ public class HelloController {
             this.name = name;
         }
     }
+
+    @GetMapping("hello-api")
+    @ResponseBody // 응답바디에 return값을 넣어주겠다 라는뜻
+    public Hello helloApi(@RequestParam("name") String name) {
+        Hello hello = new Hello();
+        hello.setName(name);
+        return  hello;
+    }
+
 
 }
