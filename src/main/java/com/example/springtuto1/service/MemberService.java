@@ -2,6 +2,8 @@ package com.example.springtuto1.service;
 
 import com.example.springtuto1.domain.Member;
 import com.example.springtuto1.reposiroty.MemortMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,10 +11,12 @@ import java.util.Optional;
 /**
  * 비지니스 로직
  */
+@Service
 public class MemberService {
 
     private final MemortMemberRepository memortMemberRepository;
 
+    @Autowired
     public MemberService(MemortMemberRepository memortMemberRepository) {
         this.memortMemberRepository = memortMemberRepository;
     }

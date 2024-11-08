@@ -1,7 +1,5 @@
 package com.example.springtuto1.domain;
 
-
-
 public class Member {
 
     private Long id;

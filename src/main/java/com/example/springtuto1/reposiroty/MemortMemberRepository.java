@@ -1,10 +1,11 @@
 package com.example.springtuto1.reposiroty;
 
 import com.example.springtuto1.domain.Member;
-import com.example.springtuto1.reposiroty.MemberRepository;
-
+import org.springframework.stereotype.Repository;
 import java.util.*;
 
+
+@Repository
 public class MemortMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
