@@ -11,7 +11,12 @@ import java.util.Optional;
  */
 public class MemberService {
 
-    private final MemortMemberRepository memortMemberRepository = new MemortMemberRepository();
+    private final MemortMemberRepository memortMemberRepository;
+
+    public MemberService(MemortMemberRepository memortMemberRepository) {
+        this.memortMemberRepository = memortMemberRepository;
+    }
+
 
     /**
      * 회원가입
