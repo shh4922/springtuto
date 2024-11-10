@@ -3,6 +3,7 @@ package com.example.springtuto1.service;
 import com.example.springtuto1.domain.Member;
 import com.example.springtuto1.reposiroty.MemberRepository;
 import com.example.springtuto1.reposiroty.MemortMemberRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,8 @@ import java.util.Optional;
 /**
  * 비지니스 로직
  */
+//JPA 는 데이터 변경이 Transactional 안에서 실행도어야함. 그래서 작성해줘야함.
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
